@@ -1,8 +1,12 @@
 (function() {
-    window.answerGraph = function(svgId, data) {
-        console.log(data);
-        var svg = d3.select("#"+svgId);
-        var box = {ymin: 0, ymax: svg.attr("height") - 50, xmin:0, xmax: svg.attr("width")}; //todo: don't hardcode
+    window.answerGraph = function(containerId, data) {
+        d3.select("#"+containerId).text("");
+
+        var svg = d3.select("#"+containerId).append("svg")
+            .attr("height", "400")
+            .attr("width", "800");
+
+        var box = {ymin: 0, ymax: svg.attr("height") - 50, xmin:0, xmax: svg.attr("width")};
 
         var x = d3.scaleBand()
             .domain(d3.range(data.length))
