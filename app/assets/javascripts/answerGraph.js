@@ -72,7 +72,7 @@
                 .style("font-size", "0.9em")
                 .style("opacity", 0)
                 .attr("x", function(d,i) {return x(i) + 0.5* x.bandwidth(); })
-                .attr("y", function(d){return Math.max(10, n_y(d[1]) - 40); })
+                .attr("y", function(d){return Math.max(15, n_y(d[1]) - 40); })
                 .text(function(d) {return d[1] + "%"});
 
         valueLabel.transition()
@@ -80,7 +80,7 @@
                     .duration(650)
                     .ease(d3.easeQuadOut)
                     .style("opacity", 1)
-                    .attr("y", function(d){return Math.max(10, n_y(d[1]) - 10); });
+                    .attr("y", function(d){return Math.max(15, n_y(d[1]) - 10); });
 
 
     };

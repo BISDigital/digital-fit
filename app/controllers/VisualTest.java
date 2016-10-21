@@ -38,6 +38,7 @@ public class VisualTest extends PageController {
         data.put(DigitalRole.DESIGNER, new BigDecimal("20.0"));
         data.put(DigitalRole.USER_RESEARCHER, new BigDecimal("65.0"));
 
+
         Html html = HtmlFormat.fill(JavaConversions.asScalaBuffer(Arrays.asList(
                 views.html.Survey.answer.render(data),
                 views.html.Survey.questions.render(SurveyModel.make()),
@@ -56,6 +57,17 @@ public class VisualTest extends PageController {
         return ok(page(html));
     }
 
+    public Result extremeData() {
+
+        Map<DigitalRole, BigDecimal> extremedata = new HashMap<>();
+        extremedata.put(DigitalRole.BUSINESS_ANALYST, new BigDecimal("100.0"));
+        extremedata.put(DigitalRole.CONTENT_DESIGNER, new BigDecimal("0.0"));
+        extremedata.put(DigitalRole.DELIVERY_MANAGER, new BigDecimal("100.0"));
+        extremedata.put(DigitalRole.DESIGNER, new BigDecimal("0.0"));
+        extremedata.put(DigitalRole.USER_RESEARCHER, new BigDecimal("100.0"));
+
+        return ok(page(views.html.Survey.answer.render(extremedata)));
+    }
 }
 
 
