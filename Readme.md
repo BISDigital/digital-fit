@@ -1,4 +1,4 @@
-# Prompt Payments Alpha
+# BEIS digital fit
  
 This is based on [Play](http://www.playframework.com), a Scala+Java MVC web service architecture.
 
