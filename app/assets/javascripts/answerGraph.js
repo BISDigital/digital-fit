@@ -74,7 +74,7 @@
             .duration(650)
             .ease(d3.easeQuadOut)
             .attr("y", function(d,i) {return n_y(d[1]);})
-            .attr("height", function(d) {return y(d[1])})
+            .attr("height", function(d) {return y(d[1])-y(0)})
 
         //valueLabel
         var valueLabel = link.append("text")
