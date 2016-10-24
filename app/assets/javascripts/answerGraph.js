@@ -6,7 +6,7 @@
             .attr("height", "400")
             .attr("width", "800");
 
-        var box = {ymin: 0, ymax: svg.attr("height") - 50, xmin:0, xmax: svg.attr("width")};
+        var box = {ymin: 1, ymax: svg.attr("height") - 50, xmin:0, xmax: svg.attr("width")};
 
         var x = d3.scaleBand()
             .domain(d3.range(data.length))
@@ -32,6 +32,14 @@
                 .attr("y2", function(d) {return gy(d);})
                 .attr("x1", box.xmin)
                 .attr("x2", box.xmax);
+
+        //axis line
+        svg.append("line")
+            .attr("x1", box.xmin)
+            .attr("x2", box.xmax)
+            .attr("stroke", "#999")
+            .attr("y1", n_y(0))
+            .attr("y2", n_y(0))
 
         var link = svg.selectAll(".link")
             .data(data)
