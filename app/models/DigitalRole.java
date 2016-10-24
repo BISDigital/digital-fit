@@ -20,4 +20,9 @@ public class DigitalRole {
     private DigitalRole(String descriptor) {
         this.descriptor = descriptor;
     }
+
+    @Override
+    public int hashCode() {
+        return descriptor != null ? descriptor.hashCode() : 0;
+    }
 }

@@ -14,21 +14,11 @@
         A digital team has many roles but this tool deals with only a few of them for now. They are:
     </p>
     <ul class="rolelist">
-        <li>
-            <a href='@routes.Home.roles("Business Analyst")'>business analyst</a>
-        </li>
-        <li>
-            <a href='@routes.Home.roles("Content Designer")'>content designer</a>
-        </li>
-        <li>
-            <a href='@routes.Home.roles("Delivery Manager")'>delivery manager</a>
-        </li>
-        <li>
-            <a href='@routes.Home.roles("Designer")'>designer</a>
-        </li>
-        <li>
-            <a href='@routes.Home.roles("User Researcher")'>user researcher</a>
-        </li>
+        <li><a href='@routes.Home.roles(DigitalRole.BUSINESS_ANALYST.descriptor)'>@DigitalRole.BUSINESS_ANALYST.descriptor</a></li>
+        <li><a href='@routes.Home.roles(DigitalRole.CONTENT_DESIGNER.descriptor)'>@DigitalRole.CONTENT_DESIGNER.descriptor</a></li>
+        <li><a href='@routes.Home.roles(DigitalRole.DELIVERY_MANAGER.descriptor)'>@DigitalRole.DELIVERY_MANAGER.descriptor</a></li>
+        <li><a href='@routes.Home.roles(DigitalRole.DESIGNER.descriptor)'>@DigitalRole.DESIGNER.descriptor</a></li>
+        <li><a href='@routes.Home.roles(DigitalRole.USER_RESEARCHER.descriptor)'>@DigitalRole.USER_RESEARCHER.descriptor</a></li>
     </ul>
     <p>
         It doesn't matter if you haven't worked in one of these roles before.  Although they each have their own techniques and knowledge, they also rely on skills that you may already have.

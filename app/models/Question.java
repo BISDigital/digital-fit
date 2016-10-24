@@ -18,4 +18,9 @@ public class Question {
         this.question = question;
         this.roleMap = roleMap;
     }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }
