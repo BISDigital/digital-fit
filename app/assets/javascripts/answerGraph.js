@@ -33,7 +33,6 @@
                 .attr("x1", box.xmin)
                 .attr("x2", box.xmax);
 
-
         var link = svg.selectAll(".link")
             .data(data)
             .enter().append("a")
